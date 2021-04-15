@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" name="viewport" content="initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <title>Home</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="prompt" id="tree">
+      </div>
+      <div class="tree">
+        <p></p>
+        <h1>bookmarks</h1>
+        <ul>
+          <li>
+            <h1>procrastination</h1>
+            <ul>
+              <li><a href="https://netflix.com">netflix</a></li>
+            </ul>
+          </li>
+          <li>
+            <h1>uni_shit</h1>
+            <ul>
+              <li><a href="https://pegaz.uj.edu.pl">pegaz</a></li>
+              <li><a href="https://www.office.com">office</a></li>
+            </ul>
+          </li>
+          <li>
+            <h1>misc</h1>
+            <ul>
+              <li><a href="https://www.facebook.com">fb</a></li>
+              <li><a href="https://www.github.com">git</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="prompt" id="ddg">
+      </div>
+      <form action="https://duckduckgo.com/" method="GET">
+        <h1>search: </h1>
+        <input type="text" name="q" autofocus="autofocus">
+      </form>
+    </div>
+  </body>
+    <script>
+var dom = (id) => document.getElementById(id)
+var name = "matt"
+var host = "machine"
+var text = `[<span>${name}</span>@<span>${host}</span> ~]$ `
+var update = function (id) { dom(id).innerHTML = text + id; }  
+var ids = [ "tree", "ddg" ]
+ids.forEach(update)
+//var ids = document.querySelectorAll('[id]')
+//Array.prototype.forEach.call(ids, update)
+
+
+    </script>
+</html>
